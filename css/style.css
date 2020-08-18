@@ -1,0 +1,500 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Navbar */
+
+#navbar h1 {
+  color: #fff;
+  padding-left: 20px;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+#navbar h1 span {
+  color: #28a745;
+}
+
+#navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+#navbar {
+  background-color: #333;
+  opacity: 0.8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  width: 100%;
+  position: fixed;
+}
+
+/* Here the navbar is taken out of the normal flow of document when position fixed is applied to it, so its default width would be that containing its contents. But when width:100% is applied to it, it takes the width w.r.t to the viewport */
+
+#navbar a {
+  text-decoration: none;
+  /* display: inline-block; */
+  padding: 13px 20px;
+  margin: 10px 5px;
+  color: #fff;
+}
+
+#navbar a:hover {
+  border-bottom: 2px solid #28a745;
+}
+
+.top {
+  background: transparent !important;
+}
+
+#navbar {
+  transition: 0.5s;
+}
+
+/* Showcase Area */
+
+#showcase {
+  background: url("../images/home/showcase.jpg") no-repeat center center/cover;
+  height: 100vh;
+}
+
+#showcase #content {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  padding: 20px;
+}
+
+#showcase h1 {
+  padding-bottom: 20px;
+}
+
+#showcase h3 {
+  padding-bottom: 20px;
+}
+
+#showcase a {
+  color: #fff;
+  text-decoration: none;
+  background-color: #28a745;
+  margin-top: 10px;
+  padding: 13px 40px;
+  border-radius: 10px;
+}
+
+/* Here when an 'a' tag is among flex-items, then its display property is blockified but its width is calculated in flex context so its width is calculted as per fitting its content instead of all the way across which is normally the case with display:block */
+
+/* But if you comment out align-items: center, the button will go all the way across because default value of align-items is stretch.  */
+
+#showcase .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+/* About Section  */
+
+#about {
+  background-color: #f4f4f4;
+  height: 300px;
+}
+
+.flex-items {
+  height: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#about .fas {
+  color: white;
+  padding: 10px;
+  background-color: #28a745;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.card {
+  padding: 20px;
+}
+
+.card h3 {
+  padding-bottom: 20px;
+}
+
+/* Solutions */
+
+#solutions {
+  height: 500px;
+  display: flex;
+}
+
+#solutions-pic {
+  background: url("../images/home/people.jpg") no-repeat center center/cover;
+  height: 100%;
+
+  flex-basis: 50%;
+}
+
+#solutions-content {
+  background-color: #28a745;
+  color: #fff;
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-basis: 50%;
+}
+
+#solutions-content p {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+#solutions-content a {
+  /* display: inline-block; */
+  color: white;
+  text-decoration: none;
+  background-color: #28a745;
+  padding: 13px 40px;
+  border-radius: 10px;
+  border: 1px solid white;
+}
+
+/* Cases Section */
+
+.section-header {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.section-header h2 {
+  font-size: 40px;
+  margin: 20px 0;
+}
+
+.section-padding {
+  padding: 20px 20px 40px;
+}
+
+#cases .row {
+  display: flex;
+  padding: 0 4px;
+  flex-wrap: wrap;
+}
+
+#cases img {
+  width: 25%;
+  padding: 5px;
+}
+
+#cases img:hover {
+  opacity: 0.7;
+}
+
+/* Blog Section */
+
+#blog {
+  display: flex;
+}
+
+#blog .column {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+#blog-content {
+  background-color: #0284d0;
+  color: #fff;
+  /* height: 100%; */
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1;
+}
+
+#blog-content p {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+#blog-content a {
+  /* display: inline-block; */
+  color: white;
+  text-decoration: none;
+  background-color: #0284d0;
+  padding: 13px 40px;
+  border-radius: 10px;
+  border: 1px solid white;
+}
+
+#blog-pic {
+  flex: 1 1 50%;
+}
+
+#blog-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Team Section */
+
+#team #team-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  height: 180px;
+  margin: 30px 0;
+}
+
+#team #team-content #title {
+  font-weight: 800;
+}
+
+#team #team-content h1 {
+  font-weight: 200;
+  font-size: 2.5rem;
+}
+
+#team #team-pics {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+#team #team-pics .person {
+  flex-basis: 33%;
+  text-align: center;
+}
+
+#team #team-pics img {
+  width: 92%;
+  border-radius: 50%;
+}
+
+#team #team-pics .name,
+#team #team-pics .designation {
+  margin-top: 10px;
+}
+
+/* Contact Section */
+
+#contact {
+  height: 500px;
+  display: flex;
+}
+
+#contact-pic {
+  background: url("../images/home/contact.jpg") no-repeat center center/cover;
+  height: 100%;
+
+  flex-basis: 50%;
+}
+
+#contact-form {
+  background-color: #f4f4f4;
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  flex-basis: 50%;
+}
+
+#contact-form input {
+  padding: 10px 5px;
+  margin-bottom: 15px;
+  border: 1px solid #f5f5f5;
+}
+
+#contact-form input:focus {
+  outline-color: #28a745;
+}
+
+#contact-form h2 {
+  margin-bottom: 20px;
+  font-size: 40px;
+  font-weight: 200;
+}
+
+#contact-form button {
+  /* display: inline-block; */
+  margin-top: 15px;
+  color: white;
+  text-decoration: none;
+  background-color: #28a745;
+  padding: 10px 40px;
+  border-radius: 5px;
+  border: none;
+}
+
+#contact-form button:hover {
+  opacity: 0.9;
+}
+
+/* Footer */
+
+footer {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+}
+
+footer i {
+  color: #fff;
+  padding: 10px 15px;
+}
+
+footer i:hover {
+  color: #28a745;
+}
+
+footer #copyright {
+  color: #fff;
+}
+
+/* Blog Showcase section */
+
+#blog-showcase {
+  background: url("../images/home/blog.jpg") no-repeat center center/cover;
+  height: 250px;
+}
+
+#blog-overlay {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+/* Blog Posts */
+
+#blog-1,
+#blog-2,
+#blog-3 {
+  display: flex;
+  height: 550px;
+}
+
+.blog-image {
+  flex-basis: 50%;
+}
+
+.blog-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Here display:block is used because when the screen width goes below 768 px and the  display:flex is removed from #blog-1,2,3 the image will stack over the contents and there appears extra space below the image which are inside a div. So display:block helps for that. Also refer to : https://stackoverflow.com/questions/5804256/image-inside-div-has-extra-space-below-the-image/5804278 */
+
+.blog-content {
+  flex-basis: 50%;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 25px;
+}
+
+.blog-content h2 {
+  font-weight: 200;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.blog-content .postedby {
+  margin-bottom: 30px;
+}
+
+.blog-content .postedby span {
+  font-weight: 800;
+}
+
+.blog-content .excerpt {
+  line-height: 1.6;
+}
+
+.blog-content a {
+  /* display: inline-block; */
+  color: white;
+  text-decoration: none;
+  background-color: #333;
+  padding: 13px 35px;
+  border-radius: 10px;
+  border: 1px solid white;
+  margin-top: 30px;
+}
+
+.bg-dark {
+  background-color: #333;
+  color: #fff;
+}
+
+.bg-light {
+  background-color: #f4f4f4 !important;
+  color: #333 !important;
+}
+
+/* Post */
+
+#post {
+  padding: 40px 20px;
+}
+
+#post h1 {
+  border-bottom: 1px solid #333;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  font-size: 40px;
+  font-weight: 200;
+}
+
+#post .postby span {
+  font-weight: 800;
+}
+
+#post #image {
+  width: 100%;
+  text-align: center;
+}
+
+#post #image img {
+  width: 300px;
+  border-radius: 50%;
+  margin: 30px 20px;
+}
+
+#post p {
+  margin: 20px 5px;
+  line-height: 1.7;
+  font-weight: 500;
+}

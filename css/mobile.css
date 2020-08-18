@@ -1,0 +1,75 @@
+@media (max-width: 768px) {
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: auto;
+  }
+
+  #navbar h1 {
+    margin-top: 20px;
+  }
+
+  #navbar a {
+    padding: 13px 10px;
+    margin: 10px 5px;
+  }
+
+  #about {
+    height: auto;
+  }
+
+  .flex-items {
+    display: block;
+  }
+
+  #solutions {
+    display: block;
+    height: auto;
+  }
+
+  #solutions-pic {
+    height: 400px;
+  }
+
+  #cases img {
+    width: 100%;
+  }
+
+  #blog {
+    display: block;
+  }
+
+  #team #team-content {
+    padding: 20px;
+  }
+
+  #team #team-pics {
+    display: block;
+  }
+
+  #team #team-pics img {
+    width: 60%;
+  }
+
+  #team #team-pics .designation {
+    margin-bottom: 40px;
+  }
+
+  #contact {
+    height: auto;
+    display: block;
+  }
+
+  #contact-pic {
+    height: 400px;
+  }
+
+  #blog-1,
+  #blog-2,
+  #blog-3 {
+    display: block;
+    height: auto;
+  }
+}
